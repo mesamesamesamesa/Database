@@ -1,11 +1,12 @@
 <html>
 <head>
 <title>ITF Lab</title>
+
 </head>
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'panwit.mysql.database.azure.com', 'panwit@panwit', '123456789', 'itflab', 3306);
+mysqli_real_connect($conn, 'mememe.mysql.database.azure.com', 'it63070139@mememe', 'TLSqeq45', 'mememe', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
@@ -23,7 +24,7 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['Name'];?></div></td>
+    <td><?php echo $Result['NAME'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
   </tr>

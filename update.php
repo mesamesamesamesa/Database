@@ -11,7 +11,7 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $link = $_POST['link'];
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 
 $sql = "UPDATE guestbook SET Name=$name, Comment=$comment, Link=$comment WHERE id=$id";

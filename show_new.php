@@ -33,6 +33,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo '<a href="form_new.html?id='.$Result['id'].'">Update</a>'?></td>
 
   </tr>
+  <td><?php echo '<a href="form.html?id='.$Result['id'].'">Add</a>'?></td>
 <?php
 }
 ?>

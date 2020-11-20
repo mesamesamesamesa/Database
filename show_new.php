@@ -3,6 +3,7 @@
 <title>ITF Lab</title>
 </head>
 <body>
+<td><?php echo '<a href="form.html?id='.$Result['id'].'">Add</a>'?></td>
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'mesa.mysql.database.azure.com', 'it63070139@mesa', 'TLSqeq45', 'itflab', 3306);
@@ -33,7 +34,6 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo '<a href="form_new.html?id='.$Result['id'].'">Update</a>'?></td>
 
   </tr>
-  <td><?php echo '<a href="form.html?id='.$Result['id'].'">Add</a>'?></td>
 <?php
 }
 ?>

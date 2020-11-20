@@ -11,6 +11,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
 
 
 $name = $_POST['name'];
@@ -32,15 +33,23 @@ if (mysqli_query($conn, $sql)) {
   
 mysqli_close($conn);
 ?>
+<?php
+while($Result = mysqli_fetch_array($res))
+{
+?>
+
 <form action = "update.php" method = "POST" id="CommentForm" >
     Name:<br>
-    <input type="text" name = "name" value="<?php echo$name?>" > <br>
+    <input type="text" name = "name" value="<?php echo$Result['name']?>" > <br>
     Comment:<br>
-    <input type="text" name = "comment" value="<?php echo$comment?>" > <br>  
+    <input type="text" name = "comment" value="<?php echo$Result['comment']?>" > <br>  
     Link:<br>
-    <input type="text" name = "name" value="<?php echo$link?>" > <br>
+    <input type="text" name = "name" value="<?php echo$Result['link']?>" > <br>
     <input type="submit" id="commentBtn">
-  </form> 
+  </form>
+<?php
+}
+?> 
 
 
 </body>

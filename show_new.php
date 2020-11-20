@@ -29,7 +29,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
     <td><?php echo '<a href="delete.php?id='.$Result['id'].'">Delete</a>'?></td>
-    <td><?php echo '<a href="insert_new.php?id='.$Result['id'].'">Update</a>'?></td>
+    <td><?php echo '<a href="form.php?id='.$Result['id'].'">Update</a>'?></td>
 
   </tr>
 <?php

@@ -13,11 +13,14 @@ $id = $_GET["id"];
 $sql = "DELETE FROM guestbook WHERE ID = $id";
 
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql)) 
+{
     echo "Record delete successfully";
-  } else {
+}   
+else 
+{
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
+}
   
 mysqli_close($conn);
 ?>
